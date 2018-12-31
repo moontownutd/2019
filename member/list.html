@@ -22,8 +22,7 @@
     <link rel="stylesheet" href="../css/member.css">
 
     
-    <!--script src=""></script-->
-
+    <!--script src=""></script-->   
 	
 </head>
 
@@ -35,7 +34,43 @@
     </header>
     <!--contents-->
     <div id="contents">        
-		<iframe id="memberList" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQRIyF1HmiKDhC8sejrVTlYhSKhciwbhEyrbjZwYeKKVw9T85BoKiVrct7I5GIYeyR_oPRd_UmfP01d/pubhtml?gid=0&amp;single=false&amp;widget=true&amp;headers=false"></iframe>
+
+            <div class="member-box">
+                    <p class="tit">회원 명단</p>
+                    <ul class="member__list">
+                        <li>
+                            <p class="b-num">번호</p>
+                            <p class="name">이름</p>
+                            <p class="pgame">경기수</p>
+                            <p class="tpoint">공격포인트</p>
+                            <p class="mygoal">골</p>
+                            <p class="myas">도움</p>
+                        </li>
+<script>
+var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&callback=?";
+
+$.getJSON(GSSurl,function(data){
+    var entry=data.feed.entry;
+
+    for(var i in entry){
+        $(".member__list li:first-child").append("<li><p id='#bnum' class='b-num'>" + entry[i].title.$t + "</p> <p id='#mName' class='name'>" + entry[i].content.$t.slice(3, 7) + "</p> <p id='#pGame' class='pgame'>" + entry[i].content.$t.slice(14, 15) + "</p> <p id='#tPoint' class='tpoint'>" + entry[i].content.$t.slice(24, 25) + "</p> <p id='#myGoal' class='mygoal'>" + entry[i].content.$t.slice(30, 31) + "</p> <p id='#myAs' class='myas'>" + entry[i].content.$t.slice(37, 39) + "</p>");
+    } 
+
+});
+</script>
+                        <!--li>
+                            <p id="bNum" class="b-num"></p>
+                            <p id="mName" class="name"></p>
+                            <p id="pGame" class="pgame"></p>
+                            <p id="tPoint" class="tpoint"></p>
+                            <p id="myGoal" class="mygoal"></p>
+                            <p id="myAs" class="myas"></p>
+                        </li-->
+        			</ul>
+                </div>
+
+
+		<iframe id="memberList" style="display:none;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQRIyF1HmiKDhC8sejrVTlYhSKhciwbhEyrbjZwYeKKVw9T85BoKiVrct7I5GIYeyR_oPRd_UmfP01d/pubhtml?gid=0&amp;single=false&amp;widget=true&amp;headers=false"></iframe>
     </div>
     <!--//contents-->
 

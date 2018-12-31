@@ -1,4 +1,38 @@
-#memberList {
-    width: 100%;
-    height: 100vh;
+.member-box {
+	max-width: 1180px;
+	margin: 30px auto;
+}
+.member-box .tit {
+	font-weight: 700;
+	font-size: 26px;
+}
+.member__list {
+	width: 100%;
+	margin: 20px 0;
+	border-bottom: 1px solid rgb(255,255,255);
+}
+.member__list li {
+	font-size: 0;
+	border-top: 1px solid rgb(255,255,255);
+}
+.member__list li:first-child {}
+
+.member__list li p {
+	height: 30px;
+	display: inline-block;
+	font-size: 12px;
+	text-align: center;
+	line-height: 30px;
+}
+.b-num {width: 30px;}
+.name {width: calc(100% - 250px);}
+.pgame {width: 60px;}
+.tpoint {width: 70px;}
+.mygoal {width: 40px;}
+.myas {width: 50px;}
+
+
+
+@media screen and (max-width: 768px) {
+    #contents {padding: 0 20px;}
 }

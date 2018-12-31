@@ -1,0 +1,77 @@
+body {
+    color: rgb(255,255,255);
+    background: rgb(0,0,0);
+}
+#contents {
+    max-width: 1180px;
+    margin: 0 auto;
+
+}
+
+
+
+
+
+
+
+
+
+/*TABLE*/
+.table-box {width: calc(100% - 40px); margin:20px auto 0;}
+.table--outer{margin:20px 0 0 0;}
+.table--fix{width:85px;}
+.table--fix th{border:1px solid white;}
+th, td{height:40px;}
+ 
+.scrollbox{width:calc(100vw - 125px);/*고정된 가로길이, 여백 빼기*/ overflow-x:auto;}
+.scrollbox table{width:100%;}
+.scrollbox td{min-width:35px; text-align:center; border:1px solid white;}
+.scrollbox td:first-child{border-left:0;}
+
+
+.year {height: 81px;}
+.vat {vertical-align: top;}
+
+.att, .abs {position: relative; top: 0; left: 0;}
+.att:after {
+    content: '';
+    width: 17px;
+    height: 17px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid rgb(255,255,255);
+    border-radius: 50%;
+}
+.abs:before {
+    content: '';
+    width: 2px;
+    height: 22px;
+    display: block;
+    margin: -11px 0 0 -1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgb(255,255,255);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.abs:after {
+    content: '';
+    width: 22px;
+    height: 2px;
+    display: block;
+    margin: -1px 0 0 -11px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: rgb(255,255,255);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

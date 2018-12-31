@@ -1,0 +1,267 @@
+.link-box {
+    width: 100%;
+    height: 50px;
+}
+.link-box:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.link-box a {
+    display: inline-block;
+    font-size: 14px;
+    color: rgb(255,255,255);
+    line-height: 50px;
+}
+.link-box .prev {float: left;}
+.link-box .prev:before {content: '<< ';}
+.link-box .next {float: right;}
+.link-box .next:after {content: ' >>';}
+
+.history-area {margin: 20px 0 50px;}
+
+.history-box .date {
+    font-weight: bold;
+    font-size: 25px;    
+}
+.info__simple {
+    display: block;
+    margin: 20px 0 0;
+    font-size: 0;
+}
+.score__total {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+.score__total .total {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 25px 0 0;
+    font-size: 20px;
+    color: rgb(255,255,255);
+    vertical-align: top;
+}
+.myteam {
+    display: inline-block;
+    font-size: 0;    
+    text-align: center;
+    vertical-align: top;
+}
+.youteam {
+    display: inline-block;
+    font-size: 0;
+    text-align: center;
+    vertical-align: top;
+}
+.emblem {
+    width: 70px;
+    display: inline-block;
+    padding: 85px 0 0;
+    font-size: 14px;
+    color: rgb(255,255,255);
+    text-align: center;
+}
+.myteam .emblem {
+    margin-right: 10px;
+    background: url(../images/logo.png) no-repeat 0 0;
+    background-size: 70px;
+}
+.youteam .emblem {
+    margin-left: 10px;
+    background: url(../images/ball.png) no-repeat 0 0;
+    background-size: 70px;
+}
+.youteam.my .emblem {
+    background: url(../images/logo.png) no-repeat 0 0;
+    background-size: 70px;
+}
+.score {
+    display: inline-block;
+    padding: 25px 0 0;
+    font-size: 22px;
+    color: gold;
+    vertical-align: top;
+}
+.vs {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 20px 0 0;
+    font-size: 30px;
+    color: rgb(255,255,255);
+    vertical-align: top;
+}
+
+.record {
+    width: calc(100% - 320px);
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: top;
+}
+.record .txt {
+    margin: 10px 0 0;
+    font-size: 20px;
+    color: rgb(255,255,255);
+}
+.record .info {
+    font-size: 20px;
+    color: rgb(255,255,255);
+}
+.member__list {
+    margin: 10px 0 0;
+    font-size: 0;
+}
+.member__list li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 12px;
+    color: rgb(255,255,255);
+    line-height: 1.5;
+}
+.member__list li:after {content: ', ';}
+.member__list li:last-child {margin-right: 0;}
+.member__list li:last-child:after {content: none;}
+.backnumber:after {content: '. ';}
+.today {
+    margin: 30px 0 0;
+    padding: 30px 0 0;
+    text-align: center;
+    border-top: 1px solid rgb(255,255,255);
+}
+.today .tit {
+    margin: 0 0 10px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.goalking {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    color: rgb(255, 251, 0);
+    border-right: 1px solid rgb(255,255,255);
+    box-sizing: border-box;
+}
+.asking {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    color: rgb(0, 204, 255);
+    box-sizing: border-box;
+}
+.today .num {
+    font-weight: 700;
+    font-size: 48px;
+}
+.today .name {
+    margin: 10px 0 0;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.info__detail {margin: 20px 0 0;}
+.set-box {
+    padding: 30px 0 0;
+    margin: 30px 0 0;
+    border-top: 1px solid rgb(255,255,255);
+
+}
+.set-box:first-child {}
+.set-box:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.txt__set {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-size: 20px;
+}
+.playmember__list {
+    width: 130px;
+    float: left;
+    border-right: 1px solid rgb(255,255,255);
+    box-sizing: border-box;
+}
+.playmember__list li {margin: 5px 0 0;}
+.playmember__list li:first-child {margin: 0;}
+.playmember__list li.gk {color: rgb(6, 185, 0);}
+.playmember__list li.gk:after {
+    content: ' - GK';
+    font-size: 13px;    
+}
+.score__detail {
+    width: calc(100% - 130px);
+    float: left;
+    padding-left: 20px;
+    position: relative;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+.goal__list {
+    position: absolute;
+    top: 0;
+    left: 300px;
+}
+.goal__list li {margin: 15px 0 0;}
+.goal__list li:first-child {margin: 0;}
+.goal__list p {
+    font-size: 14px;
+    text-align: left;
+}
+.goal__list p.goal {color: rgb(255, 251, 0);}
+.goal__list p.goal:before {content: 'G - ';}
+.goal__list p.as {
+    margin: 3px 0 0;
+    font-size: 12px;
+    color: rgb(0, 204, 255);
+}
+.goal__list p.as:before {content: 'AS - ';}
+.goal__list {}
+.goal__list {}
+.goal__list {}
+.goal__list {}
+
+
+
+@media screen and (max-width: 768px) {
+    #contents {padding: 0 20px;}
+
+    .score__total {width: 100%;}
+    .score__total .total {font-size: 18px;}
+    .record {
+        width: 100%;
+        display: block;
+        margin: 30px 0 0;
+        padding: 30px 0 0;
+        border-top: 1px solid rgb(255,255,255);
+    }
+    .txt__set {margin: 0 0 10px;}
+    .playmember__list {
+        width: 100%;
+        float: none;
+        border: 0;
+    }
+    .playmember__list li, .playmember__list li:first-child {                
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 11px;
+    }
+    .playmember__list li:last-child {margin: 0;}
+    .playmember__list li.gk:after {font-size: 10px;}
+    .score__detail {
+        width: 100%;
+        padding: 0;
+        margin: 20px 0 0;
+        text-align: center;
+    }
+    .goal__list {
+        margin: 10px 0 0;
+        padding: 10px 0 0;
+        position: relative;
+        top: 0;
+        left: 0;
+        border-top: 1px solid rgb(255,255,255);
+    }
+}

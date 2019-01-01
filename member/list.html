@@ -37,12 +37,13 @@
 
             <div class="member-box">
                     <p class="tit">회원 명단</p>
+
                     <ul class="member__list">
                         <li>
                             <p class="b-num">번호</p>
                             <p class="name">이름</p>
                             <p class="pgame">경기수</p>
-                            <p class="tpoint">공격포인트</p>
+                            <p class="tpoint"><a href="javascript:void(0);" id="btnPoint">공격포인트</a></p>
                             <p class="mygoal">골</p>
                             <p class="myas">도움</p>
                         </li>
@@ -57,7 +58,33 @@ $.getJSON(GSSurl,function(data){
     } 
 
 });
+
+$('#btnPoint').on('click', function(){
+    var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:공격포인트&revert=true&callback=?";
+});
+
+/*var GSSurl2 = "https://spreadsheets.google.com/feeds/cells/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&min-col=1&max-col=6&min-row=2&max-row=19&callback=?";
+
+$.getJSON(GSSurl2,function(data){
+    var entry=data.feed.entry;
+
+    for(var i in entry){        
+        var memInfo = [];
+        memInfo.push(entry[i].content.$t);
+        $('body').append(memInfo + '<br />');
+
+        console.log(memInfo);
+
+        $(".member__list li:first-child").append("<p>" + memInfo + "</p>");
+
+        $(".member__list li:first-child").append("<li><p id='#bnum' class='b-num'>" + memInfo + "</p> <p id='#mName' class='name'>" + memInfo + "</p> <p id='#pGame' class='pgame'>" + memInfo + "</p> <p id='#tPoint' class='tpoint'>" + memInfo + "</p> <p id='#myGoal' class='mygoal'>" + memInfo + "</p> <p id='#myAs' class='myas'>" + memInfo + "</p>");
+
+        
+    } 
+
+});*/
 </script>
+                        
                         <!--li>
                             <p id="bNum" class="b-num"></p>
                             <p id="mName" class="name"></p>

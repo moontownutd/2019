@@ -24,12 +24,25 @@
 	text-align: center;
 	line-height: 30px;
 }
+.member__list li p a {display: block;}
 .b-num {width: 30px;}
 .name {width: calc(100% - 250px);}
-.pgame {width: 60px;}
-.tpoint {width: 70px;}
-.mygoal {width: 40px;}
-.myas {width: 50px;}
+.pgame, .pgame a {
+	width: 60px;
+	color: rgb(10, 250, 10);
+}
+.tpoint, .tpoint a {
+	width: 70px;
+	color: rgb(250,100,10);
+}
+.mygoal, .mygoal a {
+	width: 40px;
+	color: rgb(255, 251, 0);
+}
+.myas, .myas a {
+	width: 50px;
+	color: rgb(0, 204, 255);
+}
 
 
 

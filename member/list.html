@@ -54,7 +54,9 @@ $.getJSON(GSSurl,function(data){
     var entry=data.feed.entry;
 
     for(var i in entry){
-        $(".member__list li:first-child").append("<li><p id='#bnum' class='b-num'>" + entry[i].title.$t + "</p> <p id='#mName' class='name'>" + entry[i].content.$t.slice(3, 7) + "</p> <p id='#pGame' class='pgame'>" + entry[i].content.$t.slice(14, 15) + "</p> <p id='#tPoint' class='tpoint'>" + entry[i].content.$t.slice(24, 25) + "</p> <p id='#myGoal' class='mygoal'>" + entry[i].content.$t.slice(30, 31) + "</p> <p id='#myAs' class='myas'>" + entry[i].content.$t.slice(37, 39) + "</p>");
+        $(".member__list li:first-child").append("<li><p id='#bnum' class='b-num'>" + entry[i].title.$t + "</p> <p id='#mName' class='name'>" + entry[i].content.$t.slice(3, 7) + "</p> <p id='#pGame' class='pgame'>" + entry[i].content.$t.match(/경기수: (\d+)/)[0].split("경기수: ")[1] + "</p> <p id='#tPoint' class='tpoint'>" + entry[i].content.$t.match(/공격포인트: (\d+)/)[0].split("공격포인트: ")[1] + "</p> <p id='#myGoal' class='mygoal'>" + entry[i].content.$t.match(/골: (\d+)/)[0].split("골: ")[1] + "</p> <p id='#myAs' class='myas'>" + entry[i].content.$t.match(/도움: (\d+)/)[0].split("도움: ")[1] + "</p>");
+
+        //console.log(entry[i].content.$t.match(/경기수: (\d+)/)[0].split("경기수: ")[1]);
     } 
 
 });

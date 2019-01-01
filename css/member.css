@@ -25,8 +25,12 @@
 	line-height: 30px;
 }
 .member__list li p a {display: block;}
-.b-num {width: 30px;}
+.b-num, .b-num a {
+	width: 30px;
+	color: rgb(255,255,255);
+}
 .name {width: calc(100% - 250px);}
+.name a {color: rgb(255,255,255);}
 .pgame, .pgame a {
 	width: 60px;
 	color: rgb(10, 250, 10);

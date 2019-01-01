@@ -40,15 +40,19 @@
 
                     <ul class="member__list">
                         <li>
-                            <p class="b-num">번호</p>
-                            <p class="name">이름</p>
-                            <p class="pgame">경기수</p>
+                            <p class="b-num"><a href="javascript:void(0);" id="btnBnum">번호</a></p>
+                            <p class="name"><a href="javascript:void(0);" id="btnMname">이름</a></p>
+                            <p class="pgame"><a href="javascript:void(0);" id="btnPgame">경기수</a></p>
                             <p class="tpoint"><a href="javascript:void(0);" id="btnPoint">공격포인트</a></p>
-                            <p class="mygoal">골</p>
-                            <p class="myas">도움</p>
+                            <p class="mygoal"><a href="javascript:void(0);" id="btnMygoal">골</a></p>
+                            <p class="myas"><a href="javascript:void(0);" id="btnMyas">도움</a></p>
                         </li>
 <script>
-var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&revert=true&callback=?";
+var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&callback=?";
+
+$('#btnPoint').on('click', function(){
+    var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:골&reverse=true&callback=?";
+});
 
 $.getJSON(GSSurl,function(data){
     var entry=data.feed.entry;
@@ -65,36 +69,9 @@ $.getJSON(GSSurl,function(data){
         $(".member__list li:first-child").append("<li><p id='#bnum' class='b-num'>" + bNum + "</p> <p id='#mName' class='name'>" + mName + "</p> <p id='#pGame' class='pgame'>" + pGame + "</p> <p id='#tPoint' class='tpoint'>" + tPoint + "</p> <p id='#myGoal' class='mygoal'>" + myGoal + "</p> <p id='#myAs' class='myas'>" + myAs + "</p>");
 
         //console.log(entry[i].content.$t.match(/경기수: (\d+)/)[0].split("경기수: ")[1]);
-
-        console.log(entry[i].content.$t);
     } 
 
 });
-
-$('#btnPoint').on('click', function(){
-    var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:공격포인트&revert=true&callback=?";
-});
-
-/*var GSSurl2 = "https://spreadsheets.google.com/feeds/cells/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&min-col=1&max-col=6&min-row=2&max-row=19&callback=?";
-
-$.getJSON(GSSurl2,function(data){
-    var entry=data.feed.entry;
-
-    for(var i in entry){        
-        var memInfo = [];
-        memInfo.push(entry[i].content.$t);
-        $('body').append(memInfo + '<br />');
-
-        console.log(memInfo);
-
-        $(".member__list li:first-child").append("<p>" + memInfo + "</p>");
-
-        $(".member__list li:first-child").append("<li><p id='#bnum' class='b-num'>" + memInfo + "</p> <p id='#mName' class='name'>" + memInfo + "</p> <p id='#pGame' class='pgame'>" + memInfo + "</p> <p id='#tPoint' class='tpoint'>" + memInfo + "</p> <p id='#myGoal' class='mygoal'>" + memInfo + "</p> <p id='#myAs' class='myas'>" + memInfo + "</p>");
-
-        
-    } 
-
-});*/
 </script>
                         
                         <!--li>

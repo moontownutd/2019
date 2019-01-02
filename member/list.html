@@ -72,7 +72,7 @@ $.getJSON(GSSurl,function(data){
     for(var i in entry){
 
         var bNum = entry[i].title.$t,
-        mName = entry[i].content.$t.slice(3, 7),
+        mName = entry[i].content.$t.match(/이름: ([\u3131-\u314e|\u314f-\u3163|\uac00-\ud7a3]+)/g)[0].split("이름: ")[1],
         pGame = entry[i].content.$t.match(/경기수: (\d+)/)[0].split("경기수: ")[1],
         tPoint = entry[i].content.$t.match(/공격포인트: (\d+)/)[0].split("공격포인트: ")[1],
         myGoal = entry[i].content.$t.match(/골: (\d+)/)[0].split("골: ")[1],

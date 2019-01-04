@@ -1,21 +1,6 @@
 $(document).ready(function(){
-    $('#btnBnum').on('click', function(){
-        var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:번호&reverse=true&callback=?";
-    });
-    $('#btnMname').on('click', function(){
-        var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:이름&callback=?";
-    });
-    $('#btnPgame').on('click', function(){
-        var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:경기수&reverse=true&callback=?";
-    });
-    $('#btnPoint').on('click', function(){
-        var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:공격포인트&reverse=true&callback=?";
-    });
-    $('#btnMygoal').on('click', function(){
-        var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:골&reverse=true&callback=?";
-    });
-    $('#btnMyas').on('click', function(){
-        var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:도움&reverse=true&callback=?";
+    $('#btnRank').on('click', function(){
+        var GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:순위&reverse=true&callback=?";
     });
     
     $.getJSON(GSSurl,function(data){

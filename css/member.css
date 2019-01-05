@@ -66,6 +66,24 @@
 	#contents {padding: 0 20px;}
 	
 	.member__list li p.b-num, 
+	.member__list li p.pgame,
+	.member__list li p.wr {display: none;}
+
+	.rank, .member__list li .rank a {width: 40px;}
+	.gpoint, .member__list li .gpoint a {width: 40px;}
+	.rankscore, .member__list li .rankscore a {width: 50px;}
+	.mygoal, .member__list li .mygoal a {width: 30px;}
+	.myas, .member__list li .myas a {width: 30px;}
+	.pday, .member__list li .pday a {width: 70px;}
+	.name {
+		width: calc(100% - 390px);
+		min-width: 55px;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.member__list li p.b-num, 
 	.member__list li p.pday,
 	.member__list li p.pgame,
 	.member__list li p.win,

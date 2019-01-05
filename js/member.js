@@ -1,8 +1,6 @@
 $(document).ready(function(){
     $('#btnRank').on('click', function(){
         GSSurl = "https://spreadsheets.google.com/feeds/list/1L2bagzTWcQxts2YRzbtnL886-NpPoUZrNfxOLnv9bSI/1/public/basic?alt=json-in-script&orderby=column:순위&reverse=true&callback=?";
-
-        console.log('aaa');
     });
     
     $.getJSON(GSSurl,function(data){

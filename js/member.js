@@ -19,7 +19,7 @@ $(document).ready(function(){
             myWin = eCon.match(/승: (\d+)/)[0].split("승: ")[1],
             myDraw = eCon.match(/무: (\d+)/)[0].split("무: ")[1],
             myLose = eCon.match(/패: (\d+)/)[0].split("패: ")[1],
-            winnerRate = eCon.match(/개인승률: (\d+)/)[0].split("개인승률: ")[1],
+            winnerRate = eCon.match(/개인승률: (\d+([.]\d{0,2}))/)[0].split("개인승률: ")[1],
             myGoal = eCon.match(/득점: (\d+)/)[0].split("득점: ")[1],
             myAs = eCon.match(/도움: (\d+)/)[0].split("도움: ")[1],
             mySave = eCon.match(/세이브: (\d+)/)[0].split("세이브: ")[1];
@@ -35,7 +35,7 @@ $(document).ready(function(){
             + myWin + "</p><p id='myDraw' class='draw'>"
             + myDraw + "</p><p id='myLose' class='lose'>"
             + myLose + "</p><p id='winnerRate' class='wr'>"
-            + winnerRate + "</p><p id='myGoal' class='mygoal'>"            
+            + winnerRate + "%</p><p id='myGoal' class='mygoal'>"            
             + myGoal + "</p><p id='myAs' class='myas'>"            
             + myAs + "</p><p id='mySave' class='mysave'>"            
             + mySave + "</p></li>");

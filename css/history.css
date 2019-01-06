@@ -178,7 +178,7 @@
     font-size: 20px;
 }
 .playmember__list {
-    width: 130px;
+    width: 220px;
     float: left;
     border-right: 1px solid rgb(255,255,255);
     box-sizing: border-box;
@@ -191,7 +191,7 @@
     font-size: 13px;    
 }
 .score__detail {
-    width: calc(100% - 130px);
+    width: calc(100% - 220px);
     float: left;
     padding-left: 20px;
     position: relative;

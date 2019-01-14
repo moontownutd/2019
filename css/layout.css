@@ -9,6 +9,20 @@ body {
 }
 
 
+/*HEADER*/
+header {}
+.logo {
+    width: 130px;
+    height: 130px;
+}
+.logo a {
+    height: 130px;
+    display: block;
+    text-indent: -9999px;
+    background: url(../images/logo.png) no-repeat center center;
+    background-size: 130px;
+}
+
 
 
 

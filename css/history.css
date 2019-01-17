@@ -247,14 +247,29 @@
     border-top: 2px solid rgb(255,255,255);
 }
 .list-box li {border-bottom: 1px solid rgb(255,255,255);}
-.list-box a {
-    display: block;
+.list-box a {display: block;}
+.list-box span {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
     font-size: 20px;
+    font-weight: bold;
     color: rgb(255,255,255);
     line-height: 50px;
-    text-align: center;
+    vertical-align: top;    
+    text-align: center;  
 }
-.list-box a span {color: gold;}
+.list-box .num {width: 60px;}
+.list-box .tit__date {width: calc(100% - 210px);}
+.list-box .yteam {width: 150px;}
+.list-box li:first-child {font-size: 0;}
+.list-box li:first-child span {font-size: 16px;}
+
+.list-box #num {}
+.list-box #titDate {}
+.list-box #yTeam {color: gold;}
+
+
 @media screen and (max-width: 768px) {
     #contents {padding: 0 20px;}
 

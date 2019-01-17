@@ -1,6 +1,7 @@
 .link-box {
     width: 100%;
     height: 50px;
+    position: relative;
 }
 .link-box:after {
     content: '';
@@ -17,6 +18,17 @@
 .link-box .prev:before {content: '<< ';}
 .link-box .next {float: right;}
 .link-box .next:after {content: ' >>';}
+.link-box .list-back {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    font-size: 14px;
+    color: rgb(255,255,255);
+    line-height: 50px;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
 
 .history-area {margin: 20px 0 50px;}
 
@@ -224,6 +236,24 @@
 .goal__list {}
 
 
+/*LIST*/
+.list-box {margin: 30px auto;}
+.list-box .tit {
+    font-weight: 700;
+    font-size: 26px;
+}
+.list-box ul {
+    margin: 20px 0;
+    border-top: 2px solid rgb(255,255,255);
+}
+.list-box li {border-bottom: 1px solid rgb(255,255,255);}
+.list-box a {
+    display: block;
+    font-size: 20px;
+    color: rgb(255,255,255);
+    line-height: 50px;
+    text-align: center;
+}
 
 @media screen and (max-width: 768px) {
     #contents {padding: 0 20px;}

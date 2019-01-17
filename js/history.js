@@ -7,9 +7,11 @@ $(document).ready(function(){
         var entry=data.feed.entry;
     
         for(var i in entry){    
-            var matchDate = entry[i].title.$t;
+            var matchDate = entry[i].title.$t,
+            eCon = entry[i].content.$t,
+            youTeam = eCon.match(/상대팀: ([\D|\u3131-\u314e|\u314f-\u3163|\uac00-\ud7a3]+)/g)[0].split("상대팀: ")[1];
             
-            $(".match__list").append('<li><a href="' + matchDate + '/match.html">' + matchDate + '</a></li>');
+            $(".match__list").append('<li><a href="' + matchDate + '/match.html">' + matchDate + ' - vs <span>' + youTeam + '</span></a></li>');
         } 
     
     });

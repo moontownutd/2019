@@ -169,6 +169,7 @@
     margin: 10px 0 0;
     font-weight: 700;
     font-size: 14px;
+    line-height: 17px;
 }
 
 .info__detail {margin: 20px 0 0;}
@@ -252,22 +253,30 @@
     display: inline-block;
     margin: 0;
     padding: 0;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 14px;
     color: rgb(255,255,255);
-    line-height: 50px;
+    line-height: 40px;
     vertical-align: top;    
     text-align: center;  
 }
-.list-box .num {width: 60px;}
-.list-box .tit__date {width: calc(100% - 210px);}
-.list-box .yteam {width: 150px;}
+.list-box .num {width: 40px;}
+.list-box .tit__date {width: 65px;}
+.list-box .yteam {
+    width: calc(100% - 210px);
+    color: gold;
+}
+.list-box .result {width: 45px;}
+.list-box .place {width: 60px;}
 .list-box li:first-child {font-size: 0;}
-.list-box li:first-child span {font-size: 16px;}
+.list-box li:first-child span {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+}
 
 .list-box #num {}
 .list-box #titDate {}
-.list-box #yTeam {color: gold;}
+.list-box #yTeam {}
 
 
 @media screen and (max-width: 768px) {

@@ -277,7 +277,9 @@
 .list-box #num {}
 .list-box #titDate {}
 .list-box #yTeam {}
-
+.list-box #myResult.win {color: cyan;}
+.list-box #myResult.draw {color: orange;}
+.list-box #myResult.lose {color: red;}
 
 @media screen and (max-width: 768px) {
     #contents {padding: 0 20px;}

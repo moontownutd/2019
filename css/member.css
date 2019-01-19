@@ -101,4 +101,5 @@
 
 @media screen and (max-width: 340px) {
 	.rank, .member__list li .rank a {width: 35px;}
+	.name {width: calc(100% - 225px);}
 }

@@ -59,6 +59,7 @@
 	display: inline-block;
 	vertical-align: top;
 	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
 }
 .member__list {
 	min-width: 990px;

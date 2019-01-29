@@ -6,10 +6,10 @@
 	font-weight: 700;
 	font-size: 26px;
 }
-.member-box .tit:before {
+/*.member-box .tit:before {
 	content: '↔';
 	position: absolute;
-	top: 0;
+	top: 15px;
 	right: 0;
 	font-size: 55px;
     font-weight: 100;
@@ -19,6 +19,17 @@
 	content: '☞';
 	position: absolute;
 	top: 15px;
+	right: 5px;
+	font-size: 25px;
+	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	animation: swipeHands 2s infinite;
+}*/
+.member-box .tit:after {
+	content: '☞';
+	position: absolute;
+	top: 5px;
 	right: 5px;
 	font-size: 25px;
 	-webkit-transform: rotate(-90deg);

@@ -92,9 +92,15 @@
 .name {width: 100px;}
 .name a {color: rgb(255,255,255);}
 .rankscore {width: calc(100% - 870px);}
+.rankscore, .member__list li .rankscore a {
+	color: rgb(255, 0, 0);
+}
 .pday, .member__list li .pday a {width: 80px;}
 .pgame, .member__list li .pgame a {width: 80px;}
-.gpoint, .member__list li .gpoint a {width: 50px;}
+.gpoint, .member__list li .gpoint a {
+	width: 50px;
+	color: rgb(4, 223, 212);
+}
 .win, .member__list li .win a {width: 50px;}
 .draw, .member__list li .draw a {width: 50px;}
 .lose, .member__list li .lose a {width: 50px;}

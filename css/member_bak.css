@@ -1,0 +1,105 @@
+.member-box {margin: 30px auto;}
+.member-box .tit {
+	font-weight: 700;
+	font-size: 26px;
+}
+.member__list {
+	width: 100%;
+	margin: 20px 0;
+	border-bottom: 1px solid rgb(255,255,255);
+}
+.member__list li {
+	font-size: 0;
+	border-top: 1px solid rgb(255,255,255);
+}
+.member__list li:first-child {}
+
+.member__list li p {
+	height: 30px;
+	display: inline-block;
+	font-size: 12px;
+	text-align: center;
+	line-height: 30px;
+}
+.member__list li p a {
+	display: block;
+	color: rgb(255,255,255);
+}
+
+.rank, .member__list li .rank a {
+	width: 50px;
+	color: gold;
+}
+.b-num, .b-num a {width: 40px;}
+.name {width: calc(100% - 670px);}
+.name a {color: rgb(255,255,255);}
+.rankscore, .member__list li .rankscore a {width: 70px;}
+.pday, .member__list li .pday a {width: 80px;}
+.pgame, .member__list li .pgame a {width: 80px;}
+.gpoint, .member__list li .gpoint a {width: 50px;}
+.win, .member__list li .win a {width: 30px;}
+.draw, .member__list li .draw a {width: 30px;}
+.lose, .member__list li .lose a {width: 30px;}
+.wr, .member__list li .wr a {width: 90px;}
+.mygoal, .member__list li .mygoal a {
+	width: 40px;
+	color: rgb(255, 251, 0);
+}
+.myas, .member__list li .myas a {
+	width: 40px;
+	color: rgb(0, 204, 255);
+}
+.mysave, .member__list li .mysave a {
+	width: 40px;
+	color: rgb(250,100,10);
+}
+
+
+
+
+.tpoint, .member__list li .tpoint a {
+	width: 70px;
+	color: rgb(250,100,10);
+}
+
+@media screen and (max-width: 1000px) {
+	#contents {padding: 0 20px 50px;}
+	
+	.member__list li p.b-num, 
+	.member__list li p.pgame,
+	.member__list li p.wr {display: none;}
+
+	.rank, .member__list li .rank a {width: 40px;}
+	.gpoint, .member__list li .gpoint a {width: 40px;}
+	.rankscore, .member__list li .rankscore a {width: 50px;}
+	.mygoal, .member__list li .mygoal a {width: 30px;}
+	.myas, .member__list li .myas a {width: 30px;}
+	.pday, .member__list li .pday a {width: 70px;}
+	.name {
+		width: calc(100% - 390px);
+		min-width: 55px;
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.member__list li p.b-num, 
+	.member__list li p.pday,
+	.member__list li p.pgame,
+	.member__list li p.win,
+	.member__list li p.draw,
+	.member__list li p.lose,
+	.member__list li p.wr {display: none;}
+
+	.rank, .member__list li .rank a {width: 40px;}
+	.gpoint, .member__list li .gpoint a {width: 40px;}
+	.rankscore, .member__list li .rankscore a {width: 50px;}
+	.mygoal, .member__list li .mygoal a {width: 30px;}
+	.myas, .member__list li .myas a {width: 30px;}
+	.name {width: calc(100% - 230px);}
+}
+
+@media screen and (max-width: 340px) {
+	.rank, .member__list li .rank a {width: 35px;}
+	.name {width: calc(100% - 225px);}
+}

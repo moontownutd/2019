@@ -22,18 +22,12 @@ $(document).ready(function(){
             winnerRate = eCon.match(/개인승률: (\d+([.]\d{0,2}))/)[0].split("개인승률: ")[1],
             myGoal = eCon.match(/득점: (\d+)/)[0].split("득점: ")[1],
             myAs = eCon.match(/도움: (\d+)/)[0].split("도움: ")[1],
-            mySave = eCon.match(/세이브: (\d+)/)[0].split("세이브: ")[1]
-            sadGoal = eCon.match(/자책골: (\d+)/)[0].split("자책골: ")[1],
-            pGk = eCon.match(/키퍼: (\d+)/)[0].split("키퍼: ")[1],
-            uGoal = eCon.match(/실점: (\d+)/)[0].split("실점: ")[1],
-            uGr = eCon.match(/실점률: (\d+([.]\d{0,2}))/)[0].split("실점률: ")[1],
+            mySave = eCon.match(/세이브: (\d+)/)[0].split("세이브: ")[1];
 
-            $(".member__list.list--fix").append("<li><p id='myRank' class='rank'>"
+            $(".member__list li:first-child").append("<li><p id='myRank' class='rank'>"
             + myRank + "</p><p id='bNum' class='b-num'>"
             + bNum + "</p><p id='mName' class='name'>"
-            + mName + "</p></li>");
-            
-            $(".scroll-box .member__list").append("<li><p id='rankScore' class='rankscore'>"
+            + mName + "</p><p id='rankScore' class='rankscore'>"
             + rankScore + "</p><p id='pDay' class='pday'>"
             + pDay + "</p><p id='pGame' class='pgame'>"
             + pGame + "</p><p id='gPoint' class='gpoint'>"
@@ -44,11 +38,7 @@ $(document).ready(function(){
             + winnerRate + "%</p><p id='myGoal' class='mygoal'>"            
             + myGoal + "</p><p id='myAs' class='myas'>"            
             + myAs + "</p><p id='mySave' class='mysave'>"            
-            + mySave + "</p><p id='sadGoal' class='sadgoal'>"
-            + sadGoal + "</p><p id='pGk' class='pgk'>"
-            + pGk + "</p><p id='uGoal' class='ugoal'>"
-            + uGoal + "</p><p id='uGr' class='ugr'>"
-            + uGr + "</p></li>");
+            + mySave + "</p></li>");
     
             //console.log(entry[i].content.$t.match(/경기수: (\d+)/)[0].split("경기수: ")[1]);
         } 

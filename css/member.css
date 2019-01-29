@@ -1,10 +1,56 @@
 .member-box {margin: 30px auto;}
 .member-box .tit {
+	position: relative;
+	top: 0;
+	left: 0;
 	font-weight: 700;
 	font-size: 26px;
 }
+.member-box .tit:before {
+	content: '↔';
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 55px;
+    font-weight: 100;
+    line-height: 10px;
+}
+.member-box .tit:after {
+	content: '☞';
+	position: absolute;
+	top: 15px;
+	right: 5px;
+	font-size: 25px;
+	-webkit-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	animation: swipeHands 2s infinite;
+}
+@keyframes swipeHands {
+	0% {
+		right: 5px;
+	}  
+	50% {
+		right: 20px;
+	}
+	100% {
+		right: 5px;
+	}
+}
+.member__area {font-size: 0;}
+.member__list.list--fix {
+	width: 190px;
+	min-width: auto;
+	display: inline-block;
+}
+.scroll-box {
+	width: calc(100% - 190px);
+	display: inline-block;
+	vertical-align: top;
+	overflow-x: auto;
+}
 .member__list {
-	width: 100%;
+	min-width: 990px;
 	margin: 20px 0;
 	border-bottom: 1px solid rgb(255,255,255);
 }
@@ -31,29 +77,32 @@
 	color: gold;
 }
 .b-num, .b-num a {width: 40px;}
-.name {width: calc(100% - 670px);}
+.name {width: 100px;}
 .name a {color: rgb(255,255,255);}
-.rankscore, .member__list li .rankscore a {width: 70px;}
+.rankscore {width: calc(100% - 870px);}
 .pday, .member__list li .pday a {width: 80px;}
 .pgame, .member__list li .pgame a {width: 80px;}
 .gpoint, .member__list li .gpoint a {width: 50px;}
-.win, .member__list li .win a {width: 30px;}
-.draw, .member__list li .draw a {width: 30px;}
-.lose, .member__list li .lose a {width: 30px;}
+.win, .member__list li .win a {width: 50px;}
+.draw, .member__list li .draw a {width: 50px;}
+.lose, .member__list li .lose a {width: 50px;}
 .wr, .member__list li .wr a {width: 90px;}
 .mygoal, .member__list li .mygoal a {
-	width: 40px;
+	width: 50px;
 	color: rgb(255, 251, 0);
 }
 .myas, .member__list li .myas a {
-	width: 40px;
+	width: 50px;
 	color: rgb(0, 204, 255);
 }
 .mysave, .member__list li .mysave a {
-	width: 40px;
+	width: 70px;
 	color: rgb(250,100,10);
 }
-
+.sadgoal {width: 70px;}
+.pgk {width: 50px;}
+.ugoal {width: 50px;}
+.ugr {width: 80px;}
 
 
 
@@ -65,7 +114,7 @@
 @media screen and (max-width: 1000px) {
 	#contents {padding: 0 20px 50px;}
 	
-	.member__list li p.b-num, 
+	/*.member__list li p.b-num, 
 	.member__list li p.pgame,
 	.member__list li p.wr {display: none;}
 
@@ -78,28 +127,33 @@
 	.name {
 		width: calc(100% - 390px);
 		min-width: 55px;
-	}
+	}*/
 }
 
 
 @media screen and (max-width: 500px) {
-	.member__list li p.b-num, 
-	.member__list li p.pday,
-	.member__list li p.pgame,
-	.member__list li p.win,
-	.member__list li p.draw,
-	.member__list li p.lose,
-	.member__list li p.wr {display: none;}
+	.member__list li p.b-num {display: none;}
 
-	.rank, .member__list li .rank a {width: 40px;}
-	.gpoint, .member__list li .gpoint a {width: 40px;}
-	.rankscore, .member__list li .rankscore a {width: 50px;}
-	.mygoal, .member__list li .mygoal a {width: 30px;}
-	.myas, .member__list li .myas a {width: 30px;}
-	.name {width: calc(100% - 230px);}
+	.member__list.list--fix {width: 110px;}
+	.scroll-box {width: calc(100% - 110px);}
+	.member__list {min-width: 745px;}
+	.name {width: 60px;}
+	.rankscore {width: 60px;}
+	.pday, .member__list li .pday a {width: 60px;}
+	.pgame, .member__list li .pgame a {width: 60px;}
+	.win, .member__list li .win a {width: 35px;}
+	.draw, .member__list li .draw a {width: 35px;}
+	.lose, .member__list li .lose a {width: 35px;}
+	.mygoal, .member__list li .mygoal a {width: 40px;}
+	.myas, .member__list li .myas a {width: 40px;}
+	.mysave, .member__list li .mysave a {width: 40px;}
+	.sadgoal {width: 50px;}
+	.pgk {width: 40px;}
+	.ugoal {width: 40px;}
+	.ugr {width: 70px;}
 }
 
 @media screen and (max-width: 340px) {
-	.rank, .member__list li .rank a {width: 35px;}
-	.name {width: calc(100% - 225px);}
+	/*.rank, .member__list li .rank a {width: 35px;}
+	.name {width: calc(100% - 225px);}*/
 }

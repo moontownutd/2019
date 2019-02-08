@@ -84,6 +84,7 @@
     margin-left: 10px;
     background: url(../images/ball.png) no-repeat 0 0;
     background-size: 70px;
+    word-break: keep-all;
 }
 .youteam.my .emblem {
     background: url(../images/logo.png) no-repeat 0 0;
@@ -320,4 +321,8 @@
         left: 0;
         border-top: 1px solid rgb(255,255,255);
     }
+}
+
+@media screen and (max-width: 400px) {
+    .list-box .yteam {letter-spacing: -1.5px;}
 }

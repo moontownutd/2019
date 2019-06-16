@@ -88,11 +88,11 @@
 .member__list li:first-child {}
 
 .member__list li p {
-    height: 30px;
+    height: 40px;
     display: inline-block;
     font-size: 12px;
     text-align: center;
-    line-height: 30px;
+    line-height: 40px;
 }
 
 .member__list li p a {
